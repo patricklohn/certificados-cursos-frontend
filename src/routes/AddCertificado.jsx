@@ -1,11 +1,15 @@
 import axios from "../axios-config.js"
 import {useState, useEffect} from 'react'
+import {toast} from 'react-toastify'
 import "./AddCertificado.css"
+import { useNavigate } from "react-router-dom"
 
 const AddCertificado = () => {
 
   const [inputs, setInputs] = useState({})
   const [image,setImage] = useState(null)
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) =>{
     event.preventDefault()
@@ -19,10 +23,13 @@ const AddCertificado = () => {
       const response = await axios.post("/api/Memory", formData, {
         headers:{
           "Content-Type":"multipart/form-data" ,
-        }
+        }     
       });
+      toast.success(response.data.msg)
+      navigate("/")
     } catch (error) {
       console.log(error)
+      toast.error(error.response.data.msg)
     }
   }
 

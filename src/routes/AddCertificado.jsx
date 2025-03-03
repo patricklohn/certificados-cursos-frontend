@@ -1,5 +1,6 @@
 import axios from "../axios-config.js"
 import {useState, useEffect} from 'react'
+import "./AddCertificado.css"
 
 const AddCertificado = () => {
   return (
@@ -15,7 +16,7 @@ const AddCertificado = () => {
           <textarea type="text" placeholder="Explique sobre o curso." name="description" />
         </label>
         <label>
-          <p>Foto:</p>
+          <p>Arquivo:</p>
           <input type="file" name="image" />
         </label>
         <input type="submit" className="btn" value="Enviar"/>

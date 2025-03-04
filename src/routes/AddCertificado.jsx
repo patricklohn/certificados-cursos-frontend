@@ -37,7 +37,7 @@ const AddCertificado = () => {
     if(event.target.name === "image"){
       setImage(event.target.files[0])
     }else{
-      setInputs({...inputs, [event.target.name]: event.target.name})
+      setInputs({...inputs, [event.target.name]: event.target.value})
     }
   }
 

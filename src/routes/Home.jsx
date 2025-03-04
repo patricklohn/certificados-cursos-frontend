@@ -22,7 +22,11 @@ const Home = () => {
       <h2>Confira os seus certificados</h2>
       <div className='certificados-container'>
         {certificados.length > 0 && certificados.map((memory) =>(
-          <h1>{memory.title}</h1>
+          <div className='certificado' key={memory._id}>
+            <iframe  src={`${axios.defaults.baseURL}uploadsArquivos/${memory.src}#zoom=FitH&toolbar=0`} className='pdf-viewer' alt="memory.title"/>
+            <p>{memory.title}</p>
+            <Link className='btn' to={`/api/Memory/${memory.id}`}>Detalhar</Link>
+          </div>
         ))}
       </div>
     </div>

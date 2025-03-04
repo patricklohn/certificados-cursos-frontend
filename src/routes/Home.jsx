@@ -25,7 +25,7 @@ const Home = () => {
           <div className='certificado' key={memory._id}>
             <iframe  src={`${axios.defaults.baseURL}uploadsArquivos/${memory.src}#zoom=FitH&toolbar=0`} className='pdf-viewer' alt="memory.title"/>
             <p>{memory.title}</p>
-            <Link className='btn' to={`/api/Memory/${memory.id}`}>Detalhar</Link>
+            <Link className='btn' to={`/certificado/${memory._id}`}>Detalhar</Link>
           </div>
         ))}
       </div>

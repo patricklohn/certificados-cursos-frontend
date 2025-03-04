@@ -7,6 +7,8 @@ import App from './App.jsx'
 import Error from './routes/Error.jsx';
 import Home from './routes/Home.jsx';
 import AddCertificado from './routes/AddCertificado.jsx';
+import AddMemory from './routes/AddMemory.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       {path: "/", element: <Home/>},
       {path: "/add-certific", element: <AddCertificado/>},
+      {path: "/certificado/:id", element: <AddMemory/>},
     ],
   },
 ]);

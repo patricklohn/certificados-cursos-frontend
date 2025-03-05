@@ -23,7 +23,7 @@
 
 .certificado iframe {
     width: 100%;
-    height: 320px; /* Ajuste conforme necessário */
+    height: 400px; /* Ajuste conforme necessário */
     border: none;
 }
 
@@ -39,3 +39,4 @@
 .pdf-viewer::-webkit-scrollbar {
     display: none; /* Esconde a barra de rolagem no Chrome, Safari e Edge */
 }
+

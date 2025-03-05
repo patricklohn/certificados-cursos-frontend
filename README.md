@@ -20,7 +20,7 @@ Este repositório contém o código-fonte do frontend do projeto **Certificados*
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/SEU_USUARIO/certificados-frontend.git
+   git clone https://github.com/patricklohn/certificados-cursos-frontend.git
    ```
 
 2. Navegue até a pasta do projeto:
